@@ -10,9 +10,9 @@ const AddChirp: React.FC<IAddChirpProps> = (props: IAddChirpProps) => {
     });
 
     const onUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => setChirp({
-        userid: e.target.value,
+        userid: chirp.userid,
         content: chirp.content,
-        name: chirp.name
+        name: e.target.value
     });
 
     const onMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setChirp({

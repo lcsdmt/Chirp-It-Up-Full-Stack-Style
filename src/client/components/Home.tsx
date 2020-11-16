@@ -13,7 +13,7 @@ const Home: React.FC<IHomeProps> = () => {
     try {
       let res = await fetch("/api/chirps/");
       let chirps: chirp[] = await res.json();
-      chirps.reverse();
+      // chirps.reverse();
       setChirps(chirps);
     } catch (err) {
       console.log(err);
