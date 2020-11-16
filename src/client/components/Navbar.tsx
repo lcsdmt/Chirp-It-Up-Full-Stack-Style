@@ -6,7 +6,7 @@ const Navbar: React.FC<INavbarProps> = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          <Link to="/" className="navbar-brand font-weight-bold">
+          <Link to="/" className="navbar-brand font-weight-bold chirprHome">
             <u>CHIRPR</u>
           </Link>
           <ul className="navbar-nav">
@@ -57,8 +57,9 @@ const Navbar: React.FC<INavbarProps> = () => {
       </nav>
       <img
         src="https://i.imgur.com/Mxx6NZS.png"
-        className="img-fluid"
+        className="img-fluid mt-3"
         alt="Responsive image"
+        style={{opacity: 0.5}}
       ></img>
     </>
   );

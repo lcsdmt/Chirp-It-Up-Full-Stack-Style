@@ -8,8 +8,8 @@ const getOneUser = async (id: string) =>
 const updateUser = async (id: string, user: string) =>
   Query("UPDATE Users SET content = ? WHERE id = ?", [user, id]);
 
-const postUser = async (User: string) =>
-  Query("INSERT INTO Users(name) values (?)", [User]);
+const postUser = async (name: string) =>
+  Query("INSERT INTO Users(name) values (?)", [name]);
 
 const deleteUser = async (id: string, user: string) => Query("", [id, user]);
 

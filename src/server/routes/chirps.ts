@@ -10,19 +10,20 @@ router.get("/", async (req: express.Request, res: express.Response) => {
 
 router.get("/:id", async (req: express.Request, res: express.Response) => {
   // let id: string = req.params.id;
-  const data = await db.dbChirps.getOneChirp(req.params.id);
   //   const chirp = {
   //     id: id,
   //     username: data[0].username,
   //     message: data[0].message,
   //   };
   //   res.send(JSON.stringify(chirp));
+  const data = await db.dbChirps.getOneChirp(req.params.id);
   res.json(data[0]);
 });
 
 router.post("/", async (req: express.Request, res: express.Response) => {
   //  const user: string = await userMarket.postUser(name);
-  db.dbChirps.postChirp(req.body.name, req.body.content);
+  await db.dbUsers.postUser(req.body.name);
+  await db.dbChirps.postChirp(req.body.name, req.body.content);
   res.sendStatus(200);
 });
 
